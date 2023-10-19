@@ -2,24 +2,25 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 // import { AuthContext } from "../../provider/AuthProvider";
 import "./Header.css"
+import { AuthContext } from "../../components/Authentication/AuthProvider";
 
 const Header = () => {
 
-//     const navigate = useNavigate()
+    const navigate = useNavigate()
 
-//     const { user, logOut } = useContext(AuthContext)
-//     // console.log(profileInfo);
-//     // console.log(user?.photoURL);
+    const { user, logOut } = useContext(AuthContext)
+    // console.log(profileInfo);
+    // console.log(user?.photoURL);
 
-//     const handleLogOut = () => {
-//         logOut()
-//             .then(() => {
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
 
-//                 navigate('/')
+                navigate('/')
 
-//             })
-//             .catch((err) => { err.message })
-//     }
+            })
+            .catch(() => {  })
+    }
 
     const navlink = <>
 
@@ -57,13 +58,13 @@ const Header = () => {
                     </ul>
                 </div>
 
-                {/* <div className="navbar-end">
+                <div className="navbar-end">
 
 
 
 
                     {
-                        !user ? <Link to="/login" id="login-btn" className="btn bg-[#1b2141] drop-shadow-2xl text-white ">Login</Link>
+                        !user ? <Link to="/signin" id="login-btn" className="btn bg-[#1b2141] drop-shadow-2xl text-white ">Login</Link>
                             :
                             <div className="dropdown dropdown-end flex mt-1 justify-end bg-[#201D21] ">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -87,7 +88,7 @@ const Header = () => {
 
 
 
-                </div> */}
+                </div>
             </div>
         </div>
     );

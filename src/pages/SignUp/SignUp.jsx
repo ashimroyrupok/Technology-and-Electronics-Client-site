@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye, AiFillGoogleCircle, AiFillGithub, AiFillFacebook } from "react-icons/ai";
 import { useContext, useState } from "react";
-import  { AuthContext } from "../../components/Authentication/AuthProvider";
+import swal from 'sweetalert';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../components/Authentication/AuthProvider";
 
 
 
@@ -9,9 +12,26 @@ import  { AuthContext } from "../../components/Authentication/AuthProvider";
 const SignUp = () => {
 
     const [seePassword, setSeePassword] = useState(false)
+    const navigate = useNavigate()
 
-    const {signIn} = useContext(AuthContext)
 
+    const { signIn, signInWithGoogle, profileInfo } = useContext(AuthContext)
+
+
+
+    // google sign in
+
+    const handleGoogle = () => {
+
+        signInWithGoogle()
+            .then(() => {
+                navigate('/')
+                toast("log in successful🤩")
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
+    }
 
 
 
@@ -23,25 +43,34 @@ const SignUp = () => {
         const password = e.target.password.value
         console.log(name, imgUrl, email, password);
 
-        signIn(email,password)
-        .then(res => {
-            console.log(res.user);
+        if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d!@#$%^&*()-_=+{};:,<.>]{6,}$/.test(password)) {
 
-        })
-        .catch(err => {
-            console.log(err);
-        })
+            return toast("Password should be uppercase,lowercase an spacial character!");
 
 
+        }
 
+        signIn(email, password)
+            .then(() => {
+                profileInfo(name, imgUrl)
+                    .then(() => { })
+                    .catch(err => {
+                        console.log(err.message);
+                    })
+                // console.log(res)
+                swal("Good job!", "Sign up Successful!", "success")
 
+                navigate('/signin')
+            })
+            .catch(err => toast(err.message))
     }
 
 
 
 
+
     return (
-        <div className="hero  min-h-screen <Footer></Footer>">
+        <div className="hero bg-[#050E2D]  min-h-screen ">
             <div className="hero-content  flex-col ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl text-white my-4 font-bold">Register now!</h1>
@@ -84,7 +113,7 @@ const SignUp = () => {
                     </form>
 
                     <div className="flex flex-row justify-center items-center mb-3">
-                        <Link to="/login"
+                        <Link to="/signin"
                             className="font-medium text-pink-500 transition-colors hover:text-blue-700"
                             href="#"
                         >
@@ -93,7 +122,7 @@ const SignUp = () => {
                     </div>
 
                     <div className="flex justify-around mb-2 mx-1  gap-1  ">
-                        <div className=""> <button  className="btn  rounded-md" > <AiFillGoogleCircle className="text-2xl "></AiFillGoogleCircle>  <p>Google</p> </button> </div>
+                        <div className=""> <button onClick={handleGoogle} className="btn  rounded-md" > <AiFillGoogleCircle className="text-2xl "></AiFillGoogleCircle>  <p>Google</p> </button> </div>
 
                         <div>
 
@@ -110,7 +139,7 @@ const SignUp = () => {
 
                 </div>
             </div>
-            {/* <ToastContainer></ToastContainer> */}
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

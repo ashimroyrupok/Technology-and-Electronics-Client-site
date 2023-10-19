@@ -1,6 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { useContext, useState } from "react";
+import swal from 'sweetalert';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../components/Authentication/AuthProvider";
 
 const SignIn = () => {
@@ -22,13 +25,13 @@ const SignIn = () => {
         logIn(email, password)
             .then((res) => {
                 console.log(res);
-                // swal("Good job!", "Sign up Successful!", "success")
+                swal("Good job!", "Sign up Successful!", "success")
                 navigate('/')
 
             })
             .catch(err => {
                 console.log(err.message)
-                // toast(err.message)
+                toast(err.message)
             })
 
 
@@ -77,7 +80,7 @@ const SignIn = () => {
                         </form>
 
                         <div className="flex flex-row justify-center items-center mb-3">
-                            <p>Already have an account?                     <Link to="/register"
+                            <p>To crate  new account?                     <Link to="/signup"
                                 className="font-medium text-pink-500 transition-colors hover:text-blue-700"
                                 href="#"
                             >
@@ -88,7 +91,7 @@ const SignIn = () => {
                 </div>
             </div>
 
-            {/* <ToastContainer></ToastContainer> */}
+            <ToastContainer></ToastContainer>
 
         </div>
     );
