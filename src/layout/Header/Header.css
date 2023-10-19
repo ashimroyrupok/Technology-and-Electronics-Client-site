@@ -1,0 +1,27 @@
+.Home a.active {
+    background-color: cyan;
+    font-weight: 700;
+    color: black;
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 10px cyan,
+        0 0 10px cyan, 0 0 20px cyan;
+
+
+}
+
+
+
+#login-btn {
+    border: 2px solid cyan;
+}
+
+#login-btn:hover {
+
+    background-color: cyan;
+    font-weight: 700;
+    color: black;
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 20px cyan,
+        0 0 10px cyan, 0 0 20px cyan;
+
+}
