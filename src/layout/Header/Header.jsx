@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Header.css"
 import { AuthContext } from "../../components/Authentication/AuthProvider";
-import { BsFillMoonFill,BsSun } from "react-icons/bs";
+import { BsFillMoonFill, BsSun } from "react-icons/bs";
 
 const Header = () => {
     // const [active, setActive] = useState(SetActive);
@@ -14,7 +14,11 @@ const Header = () => {
 
 
     // light and dark mood
-
+    const [toggle, setToggle] = useState(
+        JSON.parse(localStorage.getItem("theme"))
+            ? JSON.parse(localStorage.getItem("theme"))
+            : false
+    );
 
     const element = document.documentElement;
 
@@ -27,19 +31,8 @@ const Header = () => {
             element.classList.remove("dark");
         }
     }, [toggle]);
-// 
-    const handleLogOut = () => {
-        logOut()
-            .then((res) => {
-                console.log(res);
+    // 
 
-                navigate('/')
-
-            })
-            .catch(err => {
-                console.log(err.message)
-            })
-    }
 
     const navlink = <>
 
@@ -80,7 +73,7 @@ const Header = () => {
 
                     <div className=" mr-2 lg:mr-10">
 
-                        <h3 onClick={() => setToggle(!toggle)}> {toggle ? <BsFillMoonFill className="font-bold text-2xl"></BsFillMoonFill> : <BsSun className="font-bold text-2xl"></BsSun> } </h3>
+                        <h3 onClick={() => setToggle(!toggle)}> {toggle ? <BsFillMoonFill className="font-bold text-2xl"></BsFillMoonFill> : <BsSun className="font-bold text-2xl"></BsSun>} </h3>
 
                     </div>
 
