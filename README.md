@@ -1,8 +1,9 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**live link** :https://technology-and-electroni-877f5.web.app
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+***About Tchnology and Electronics feature***
+- User can signin and sign out in this website.
+- User can add to cart there favourite product.
+- This website has dark light mood theme.
+- User can update the product.
+- Only loged user can see products details
