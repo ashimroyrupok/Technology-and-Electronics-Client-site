@@ -8,9 +8,12 @@ const Brands = () => {
     useEffect(() => {
 
 
-        fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/brands')
+        fetch('https://technology-and-electronics-server-98tlqjyw9-ashim-roys-projects.vercel.app/brands')
             .then(res => res.json())
-            .then(data => setBrands(data))
+            .then(data =>{
+                // console.log(data);
+                setBrands(data)
+            })
 
     }, [])
 

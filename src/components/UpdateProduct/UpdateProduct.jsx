@@ -25,7 +25,7 @@ const UpdateProduct = () => {
 
 
 
-        fetch(`https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/products/${_id}` , {
+        fetch(`https://technology-and-electronics-server-98tlqjyw9-ashim-roys-projects.vercel.app/products/${_id}` , {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
