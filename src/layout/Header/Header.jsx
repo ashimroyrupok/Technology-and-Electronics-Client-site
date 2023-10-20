@@ -32,7 +32,18 @@ const Header = () => {
         }
     }, [toggle]);
     // 
+    const handleLogOut = () => {
+        logOut()
+            .then((res) => {
+                console.log(res);
 
+                navigate('/')
+
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }
 
     const navlink = <>
 
