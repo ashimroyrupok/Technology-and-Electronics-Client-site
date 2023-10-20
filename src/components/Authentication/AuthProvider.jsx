@@ -10,6 +10,7 @@ export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState("")
+    const [loading,setLoading] =useState(true)
 
 
 
@@ -46,8 +47,10 @@ const AuthProvider = ({ children }) => {
 
     // ovserber
     useEffect(() => {
+        
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
+            setLoading(false)
         })
         return () => {
             unSubscribe();
@@ -63,7 +66,8 @@ const AuthProvider = ({ children }) => {
         signInWithGoogle,
         logIn,
         logOut,
-        profileInfo
+        profileInfo,
+        loading
     }
 
     return (

@@ -65,7 +65,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text text-white font-semibold">Product Image</span>
                             </label>
-                            <input type="text" placeholder="Type here image url" className="input input-bordered w-[90%]" name="img" />
+                            <input required type="text" placeholder="Type here image url" className="input input-bordered w-[90%]" name="img" />
                         </div>
                     </div>
                     <div className="flex  my-4 items-center justify-center">
@@ -73,7 +73,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text text-white font-semibold">Select Brand</span>
                             </label>
-                            <select id="brandSelect" className="select border-gray-400 w-[90%] ">
+                            <select required id="brandSelect" className="select border-gray-400 w-[90%] ">
                                 <option disabled selected>Pick up the Brand</option>
                                 <option >Samsung</option>
                                 <option>Apple</option>
@@ -87,7 +87,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text text-white font-semibold">Select Product Type</span>
                             </label>
-                            <select id="typeSelect" className="select border-gray-400 w-[90%] ">
+                            <select required id="typeSelect" className="select border-gray-400 w-[90%] ">
                                 <option disabled selected>Pick up the product type</option>
                                 <option>Laptop</option>
                                 <option>Phone</option>
@@ -100,13 +100,13 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text font-semibold text-white">Price</span>
                             </label>
-                            <input type="text" placeholder="Type here Price" className="input  w-[90%] input-bordered " name="price" />
+                            <input required type="text" placeholder="Type here Price" className="input  w-[90%] input-bordered " name="price" />
                         </div>
                         <div className="form-control w-full ">
                             <label className="label">
                                 <span className="label-text text-white font-semibold">Rating</span>
                             </label>
-                            <input type="number" placeholder="Type here Short Description" className="input input-bordered w-[90%]" name="rating" />
+                            <input required type="number" placeholder="Type here Short Description" className="input input-bordered w-[90%]" name="rating" />
                         </div>
                     </div>
                     <div className="flex justify-around items-center ">
@@ -115,7 +115,7 @@ const AddProduct = () => {
                                 <span className="label-text text-white font-semibold">Description</span>
                             </label>
                             <div className="w-[40%]">
-                                <textarea className=" w-full border-2 border-gray-400" name="description" id="" cols="20" rows="4" ></textarea>
+                                <textarea required className=" w-full border-2 border-gray-400" name="description" id="" cols="20" rows="4" ></textarea>
                             </div>
                         </div>
 
