@@ -14,7 +14,7 @@ const AllProducts = () => {
     // console.log(filter);
 
     useEffect(() => {
-        fetch('http://localhost:5000/brands')
+        fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/brands')
         .then(res => res.json())
         .then(data => setBrandImg(data))
 

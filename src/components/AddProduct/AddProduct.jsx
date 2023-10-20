@@ -24,7 +24,7 @@ const AddProduct = () => {
 
 
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

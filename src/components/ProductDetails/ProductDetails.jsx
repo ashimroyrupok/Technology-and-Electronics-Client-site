@@ -20,7 +20,7 @@ const ProductDetails = ({ item }) => {
 
         // console.log(cartData);
 
-        fetch('http://localhost:5000/carts', {
+        fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/carts', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

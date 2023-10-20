@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: "/allProducts/:brand",
         element: <AllProducts></AllProducts>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/products')
 
       },
       {
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         element: <ProductDetailsPrivateRoute>
           <Product></Product>
         </ProductDetailsPrivateRoute>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/products')
 
       },
       {
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         element: <UpdateProductPrivateRoute>
           <UpdateProduct></UpdateProduct>
         </UpdateProductPrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/products/${params.id}`)
 
       },
       {
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
         element: <MyCartPrivateRoute>
           <MyCart></MyCart>
         </MyCartPrivateRoute>,
-        loader: () => fetch('http://localhost:5000/carts')
+        loader: () => fetch('https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/carts')
       }
 
 

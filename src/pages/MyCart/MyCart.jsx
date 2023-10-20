@@ -32,7 +32,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${id}`, {
+                fetch(`https://technology-and-electronics-server-f402miekl-ashim-roys-projects.vercel.app/carts/${id}`, {
                     method: "DELETE",
 
                 })
