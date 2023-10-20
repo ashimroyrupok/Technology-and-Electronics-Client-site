@@ -1,0 +1,34 @@
+#container{
+    animation: animate 16s ease-in-out infinite ;
+    background-size: cover;
+}
+
+@keyframes animate {
+
+    0%,100%{
+        background-image: url(https://i.ibb.co/9r3bsKz/realme-11-pro-series-banner.png);
+    }
+    
+
+    25%{
+        background-image: url(https://i.ibb.co/5FcV8Y7/091323-i-Phone-15-Coming-soon-banner.jpg);
+    }
+    
+
+    50%{
+        background-image: url(https://i.ibb.co/q1wqLqs/galaxy-s23-ultra-highlights-kv.jpg);
+    }
+    
+
+    75%{
+        background-image: url(https://i.ibb.co/6PfF9ky/EYt-KJJ-U0-AIuiee.jpg);
+    }
+    
+
+   
+}
+
+#outer{
+    background: rgba(0,0,0,0.7);
+    
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "id" :1,
+        "brand": "Samsung",
+        "bannerImg": "https://i.ibb.co/hgm8Ggb/Samsung-Banner.jpg",
+        "img1": "https://i.ibb.co/xHFbbtr/eabdaadef69a169117a2900e77bfde9f.jpg",
+        "img2": "https://i.ibb.co/6YCCbfR/xz7tsxr-Ub-Tf-Fn-Xfia-Ub-ZSL.jpg",
+        "img3": "https://i.ibb.co/VVnDhLf/Clean-Shot-2021-01-14-at-10-22-52-2x.jpg"
+    },
+    {
+        "id" :2,
+        "brand": "Apple",
+        "bannerImg": "https://i.ibb.co/7bzf3WS/apple-logo-19106337.jpg",
+        "img1": "https://i.ibb.co/7G1RsNc/maxresdefault.jpg",
+        "img2": "https://i.ibb.co/5Y0cLts/Clay-Realistic-i-Phone-14-Pro-Free-Mockup.jpg",
+        "img3": "https://i.ibb.co/r7CgPk3/sub-banner-Artboard-1.jpg"
+    },
+    {
+        "id" :3,
+        "brand": "Google",
+        "bannerImg": "https://i.ibb.co/6BTzdps/hero-image-fill-size-1200x675-v1678818665.jpg",
+        "img1": "https://i.ibb.co/YkwLHYh/pixel-7-pro-superfans-page-1.jpg",
+        "img2": "https://i.ibb.co/7R5v1cW/iq-PGm-SFbj-Anq-Joc-RPfw8-WZ.png",
+        "img3": "https://i.ibb.co/zrfLFDt/google-pixel-6-gold.jpg"
+    },
+    {
+        "id" :4,
+        "brand": "Realme",
+        "bannerImg": "https://i.ibb.co/GQXx4MB/2560px-Realme-realme-logo-box-RGB-01-svg.png",
+        "img1": "https://etimg.etb2bimg.com/photo/74493827.cms",
+        "img2": "https://i.ibb.co/rk4Kmp9/gsmarena-001.jpg",
+        "img3": "https://i.ibb.co/wsQzyfr/maxresdefault.jpg"
+    },
+    {
+        "id" :5,
+        "brand": "OnePlus",
+        "bannerImg": "https://i.ibb.co/d41hxNs/Oneplus-newlogo-main-1584369675960.jpg",
+        "img1": "https://i.ibb.co/3shRwNg/Screenshot-2023-02-07-19-29-50-141-com-google-android-youtube.jpg",
+        "img2": "https://i.ibb.co/G2sCyf5/Untitled-design-18-1557853467142.png",
+        "img3": "https://i.ibb.co/dJRgq84/DS3-GVGupit-Pw-NRk-TUs-Lq5-1200-80.jpg"
+    },
+    {
+        "id" :6,
+        "brand": "Xiaomi",
+        "bannerImg": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/2T4QVAFRMJLADF3EWRYBA4AJWY.jpg",
+        "img1": "https://i.ibb.co/txCBjW5/g7-green1.jpg",
+        "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8gj18aMnmHw2zdTRSgyfgQyUbixdUolvVaA&usqp=CAU",
+        "img3": "https://i.ibb.co/xSGWBb0/912ca1049a3483e0bbf6cce89aebaa04.jpg"
+    }
+]

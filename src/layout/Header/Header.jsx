@@ -25,7 +25,7 @@ const Header = () => {
     const navlink = <>
 
         <li className="Home"> <NavLink to="/"> Home </NavLink> </li>
-        <li className="Home"> <NavLink to="/services"> Add Product </NavLink> </li>
+        <li className="Home"> <NavLink to="/addProduct"> Add Product </NavLink> </li>
         <li className="Home"> <NavLink to="/services"> My Cart </NavLink> </li>
         <li className="Home"> <NavLink to="/profile"> Profile</NavLink> </li>
         <li className="Home" > <NavLink to="/contactUs"> Contact Us </NavLink> </li>
@@ -47,7 +47,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <a to='/' className="btn btn-ghost normal-case text-xl">
-                        Tech and Gaming
+                        Technology and Electronics
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
