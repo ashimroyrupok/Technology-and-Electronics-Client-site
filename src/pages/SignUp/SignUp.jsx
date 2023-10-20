@@ -108,7 +108,7 @@ const SignUp = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-cyan-400">Register</button>
+                            <button className="btn  bg-[#1B2141] border-cyan-400 hover:bg-cyan-400">Register</button>
                         </div>
                     </form>
 

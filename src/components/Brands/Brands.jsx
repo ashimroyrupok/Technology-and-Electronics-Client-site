@@ -18,8 +18,8 @@ const Brands = () => {
 
     return (
 
-        <div className="max-w-[1240px] mx-auto my-11 bg-[#1B2141] p-4 rounded-md">
-            <h2 className="text-5xl font-bold text-center text-white">Our Brands</h2>
+        <div className="max-w-[1240px] mx-auto my-11 dark:bg-slate-300 bg-[#1B2141] p-4 rounded-md">
+            <h2 className="text-5xl font-bold text-center dark:text-black text-white">Our Brands</h2>
             <div   className="grid lg:grid-cols-6  gap-4 mt-8 my-2">
 
                 {

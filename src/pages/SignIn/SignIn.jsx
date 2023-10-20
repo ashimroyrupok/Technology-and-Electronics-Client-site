@@ -76,12 +76,12 @@ const SignIn = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-cyan-400 ">Login</button>
+                                <button className="btn bg-[#1B2141] border-cyan-400 text-white hover:bg-cyan-400 ">Login</button>
                             </div>
                         </form>
 
                         <div className="flex flex-row justify-center items-center mb-3">
-                            <p>To crate  new account?                     <Link to="/signup"
+                            <p>To crate  new account?      <Link to="/signup"
                                 className="font-medium text-pink-500 transition-colors hover:text-blue-700"
                                 href="#"
                             >

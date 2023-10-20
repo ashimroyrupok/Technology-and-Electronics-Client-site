@@ -1,17 +1,33 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../provider/AuthProvider";
 import "./Header.css"
 import { AuthContext } from "../../components/Authentication/AuthProvider";
+import { BsFillMoonFill,BsSun } from "react-icons/bs";
 
 const Header = () => {
+    // const [active, setActive] = useState(SetActive);
 
     const navigate = useNavigate()
 
-    const { user, logOut } = useContext(AuthContext)
-    // console.log(profileInfo);
-    // console.log(user?.photoURL);
 
+    const { user, logOut } = useContext(AuthContext)
+
+
+    // light and dark mood
+
+
+    const element = document.documentElement;
+
+    localStorage.setItem("theme", JSON.stringify(toggle));
+
+    useEffect(() => {
+        if (toggle) {
+            element.classList.add("dark");
+        } else {
+            element.classList.remove("dark");
+        }
+    }, [toggle]);
+// 
     const handleLogOut = () => {
         logOut()
             .then((res) => {
@@ -20,9 +36,9 @@ const Header = () => {
                 navigate('/')
 
             })
-            .catch( err => { 
+            .catch(err => {
                 console.log(err.message)
-             })
+            })
     }
 
     const navlink = <>
@@ -35,8 +51,8 @@ const Header = () => {
     </>
 
     return (
-        <div className="bg-[#1b2141] ">
-            <div className="navbar bg-[#1b2141] text-white flex justify-between">
+        <div className="bg-[#1b2141]  ">
+            <div className="navbar bg-[#1b2141] dark:bg-slate-200 dark:text-black text-white flex justify-between">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,6 +78,12 @@ const Header = () => {
 
                 <div className="navbar-end">
 
+                    <div className=" mr-2 lg:mr-10">
+
+                        <h3 onClick={() => setToggle(!toggle)}> {toggle ? <BsFillMoonFill className="font-bold text-2xl"></BsFillMoonFill> : <BsSun className="font-bold text-2xl"></BsSun> } </h3>
+
+                    </div>
+
 
 
 
@@ -81,7 +103,7 @@ const Header = () => {
 
                                         </a>
                                     </li>
-                                  
+
                                     <button className="btn border-cyan-500  hover:bg-cyan-500 text-white bg-[#1B2141] mt-1" onClick={handleLogOut}>Logout</button>
 
                                 </ul>

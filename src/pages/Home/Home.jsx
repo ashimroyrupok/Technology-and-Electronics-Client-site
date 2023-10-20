@@ -6,11 +6,9 @@ import Review from "../../components/Review/Review";
 
 const Home = () => {
     return (
-        <div>
+        <div className="dark:bg-slate-200">
 
             <Banner></Banner>
-
-            <h2>this is home</h2>
             <Brands></Brands>
             <ContactUs></ContactUs>
             <Review></Review>

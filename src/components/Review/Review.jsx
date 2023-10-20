@@ -3,7 +3,7 @@ const Review = () => {
     return (
         <div className="my-8">
 
-            <h2 className="text-white font-bold text-5xl text-center my-4">Our Partner</h2>
+            <h2 className="text-white dark:text-black font-bold text-5xl text-center my-4">Our Partner</h2>
 
 
             <Marquee>
