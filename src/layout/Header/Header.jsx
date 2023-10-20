@@ -14,19 +14,22 @@ const Header = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(() => {
+            .then((res) => {
+                console.log(res);
 
                 navigate('/')
 
             })
-            .catch(() => {  })
+            .catch( err => { 
+                console.log(err.message)
+             })
     }
 
     const navlink = <>
 
         <li className="Home"> <NavLink to="/"> Home </NavLink> </li>
         <li className="Home"> <NavLink to="/addProduct"> Add Product </NavLink> </li>
-        <li className="Home"> <NavLink to="/services"> My Cart </NavLink> </li>
+        <li className="Home"> <NavLink to="/mycart"> My Cart </NavLink> </li>
 
 
     </>

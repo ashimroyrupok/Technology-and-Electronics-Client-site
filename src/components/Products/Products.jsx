@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { Rating } from "@mui/material";
+
+
 const Products = ({ product }) => {
     // console.log(product);
     const { _id, name, img, selectedBrand, selectedType, price, rating, description } = product
@@ -23,7 +26,8 @@ const Products = ({ product }) => {
                 <div className="flex justify-between ">
                     <p className="text-slate-400 font-semibold"> {selectedType} </p>
 
-                    <h1>rating</h1>
+                     <Rating name="size-large" defaultValue={rating} size="large" /> 
+                    
                 </div>
                 <h2 className="text-slate-400 font-semibold"> Price: <span className="text-white font-bold">{price} $ </span> </h2>
 

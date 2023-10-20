@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { useContext, useState } from "react";
 import swal from 'sweetalert';
@@ -11,6 +11,7 @@ const SignIn = () => {
     const [seePassword, setSeePassword] = useState(false)
 
     const navigate = useNavigate()
+    const location = useLocation()
 
     const { logIn } = useContext(AuthContext)
 
@@ -25,8 +26,8 @@ const SignIn = () => {
         logIn(email, password)
             .then((res) => {
                 console.log(res);
+                navigate( location?.state ? location.state : "/" )
                 swal("Good job!", "Sign up Successful!", "success")
-                navigate('/')
 
             })
             .catch(err => {

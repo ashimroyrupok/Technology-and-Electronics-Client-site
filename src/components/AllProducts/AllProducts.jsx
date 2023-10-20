@@ -9,9 +9,9 @@ const AllProducts = () => {
     const products = useLoaderData()
     // console.log(products);
     const { brand } = useParams()
-    console.log(brand);
+    // console.log(brand);
     const filter = products.filter(product => product.selectedBrand == brand)
-    console.log(filter);
+    // console.log(filter);
 
     useEffect(() => {
         fetch('http://localhost:5000/brands')
@@ -21,7 +21,7 @@ const AllProducts = () => {
         
     },[])
     const filterImg = brandImg.filter(img => img.brand == brand)
-    console.log(filterImg);
+    // console.log(filterImg);
 
 
     return (

@@ -1,7 +1,48 @@
+import { useContext, useState } from "react";
+import swal from "sweetalert";
+import { AuthContext } from "../Authentication/AuthProvider";
 
 const ProductDetails = ({ item }) => {
-    // console.log(item);
+
+    const { user } = useContext(AuthContext)
+    // console.log(user.email);
+    const email = user.email
+
+
     const { name, img, selectedBrand, selectedType, price, rating, description } = item
+
+
+    const cartData = { email,name, img,selectedBrand,selectedType,price,rating,description }
+
+
+
+    const handleCart = () => {
+
+        // console.log(cartData);
+
+        fetch('http://localhost:5000/carts', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(cartData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data) {
+
+                    swal("Good job!", "add to cart Successful!", "success")
+
+
+
+                }
+            })
+
+
+    }
+
+
 
     return (
         <div className="flex justify-center items-center">
@@ -27,7 +68,7 @@ const ProductDetails = ({ item }) => {
                         {description}
 
                     </p>
-                    <a className="inline-block" >
+                    <a className="inline-block" onClick={handleCart} >
                         <button
                             className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button"

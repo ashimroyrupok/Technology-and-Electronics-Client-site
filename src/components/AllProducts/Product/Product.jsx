@@ -5,7 +5,7 @@ const Product = () => {
     const product = useLoaderData()
     // console.log(products);
     const { id } = useParams()
-    console.log(id);
+    // console.log(id);
     const find = product.filter(item => item._id == id )
     // console.log(find);
 
