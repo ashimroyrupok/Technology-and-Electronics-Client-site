@@ -12,7 +12,7 @@ const ProductDetails = ({ item }) => {
     const { name, img, selectedBrand, selectedType, price, rating, description } = item
 
 
-    const cartData = { email,name, img,selectedBrand,selectedType,price,rating,description }
+    const cartData = { email, name, img, selectedBrand, selectedType, price, rating, description }
 
 
 
@@ -20,7 +20,24 @@ const ProductDetails = ({ item }) => {
 
         // console.log(cartData);
 
+        fetch('http://localhost:5000/carts', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(cartData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                if (data) {
 
+                    swal("Good job!", "add to cart Successful!", "success")
+
+
+
+                }
+            })
 
 
     }
