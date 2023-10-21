@@ -8,10 +8,10 @@ const Brands = () => {
     useEffect(() => {
 
 
-        fetch('https://technology-and-electronics-server-98tlqjyw9-ashim-roys-projects.vercel.app/brands')
+        fetch('https://technology-and-electronics-server-blond.vercel.app/brands')
             .then(res => res.json())
             .then(data =>{
-                // console.log(data);
+                console.log(data);
                 setBrands(data)
             })
 
